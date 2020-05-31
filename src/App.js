@@ -12,9 +12,6 @@ const App = () => {
   const [start, setStart] = useState(false);
   const [finish, setFinish] = useState(false);
 
-  // const [min, setMin] = useState(1);
-  // const [max, setMax] = useState(10);
-  const [answer, setAnswer] = useState(null);
   const [random, setRandom] = useState(numerosAleatorios(min, max));
 
   // Metodos
