@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 let min = 1;
-let max = 100;
+let max = 1000;
 
 function numerosAleatorios(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -43,7 +43,7 @@ const App = () => {
   function endGame() {
     setStart(false);
     min = 1;
-    max = 100;
+    max = 1000;
     setRandom(numerosAleatorios(min, max));
     setFinish(false);
   }
@@ -57,7 +57,7 @@ const App = () => {
       <h2 className="font-weight-bold">Instrucciones</h2>
       <div className="row justify-content-md-center">
         <div className="col-sm-12 col-md-6">
-          <p>Piensa un número del 1 al 100.</p>
+          <p>Piensa un número del 1 al 1000.</p>
           <p>
             Cuando aparezca un número en pantalla selecciona <strong>'&#60;'</strong> si es menor a tu número, <strong>'&#62;'</strong> si
             es mayor a tu número o <strong>'&#61;'</strong> igual al número que pensastes.
@@ -66,7 +66,7 @@ const App = () => {
       </div>
       <br />
       <br />
-      <h2>¿Piensa en un número?</h2>
+      <h2>Piensa en un número</h2>
       <br />
       <br />
       {start ? (
@@ -78,6 +78,7 @@ const App = () => {
                   <h1 className="card-title font-weight-bold">{random}</h1>
                 </div>
               </div>
+              <br />
               {finish && <p>Tu número es: {random}</p>}
             </div>
           </div>
@@ -118,6 +119,7 @@ const App = () => {
           </div>
         </div>
       )}
+      <br />
     </div>
   );
 };
